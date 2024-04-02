@@ -1,0 +1,58 @@
+.h1-cadastro{
+    padding-top: 20px;
+    font-size: 6.5rem;
+    font-weight: bold;
+    color: #525252;
+    margin-bottom: 20px;
+    text-align:  center;
+}
+
+
+/* Estilo para o parágrafo de introdução */
+.lead-p {
+    font-size: 3.5rem; /* Tamanho da fonte */
+    color: #666; /* Cor do texto */
+    text-align: center;
+}
+
+.table {
+    font-size: 3rem; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center;
+    border-collapse: collapse; /* Colapsar a borda da tabela */
+
+}
+
+.table th {
+    background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
+    color: #333; /* Cor do texto do cabeçalho */
+    font-weight: bold; /* Deixar o texto em negrito */
+    padding: 10px; /* Espaçamento interno do cabeçalho */
+}
+
+.table td {
+    white-space: nowrap; /* Evitar que o texto quebre para a próxima linha */
+    border-collapse: separate; /* Garante que as bordas sejam separadas */
+    border-spacing: 1000px 10px; /* Espaçamento entre as linhas (0 para as colunas) */
+}
+
+.botao-align{
+    text-align: center;
+}
+
+.cadastrar_button{
+    width: 80%;
+    margin-top: 20px;
+    padding: 5px 15px;
+    display: inline-block;
+    border: 1px solid #494949;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 50px;
+    background-color: #5d0377;
+    color: white;
+    overflow: inherit;
+}
+
+.cadastrar_button:hover {
+    background-color: #8b0598;
+}

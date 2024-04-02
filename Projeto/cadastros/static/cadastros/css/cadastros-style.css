@@ -1,0 +1,64 @@
+.h1-cadastro{
+    padding-top: 20px;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #525252;
+    margin-bottom: 20px;
+    text-align:  center;
+}
+
+
+/* Estilo para o parágrafo de introdução */
+.lead {
+    font-size: 50px; /* Tamanho da fonte */
+    color: #666; /* Cor do texto */
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.cadastrar_cliente{
+    padding-left: 10%;
+    padding-bottom: 20%;
+}
+
+/* Estilo para o formulário */
+.cadastrar_cliente form {
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estilo para os campos do formulário */
+.cadastrar_cliente input {
+    width: 80%; /* Largura do campo */
+    padding: 50px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Margem inferior */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 50px; /* Tamanho da fonte */
+}
+
+
+
+/* Estilo para os títulos dos campos */
+.cadastrar_cliente label {
+    font-size: 60px; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+    margin-bottom: 5px; /* Margem inferior */
+}
+
+.cadastrar_button{
+    width: 80%;
+    margin-top: 80px;
+    padding: 15px 25px;
+    display: inline-block;
+    border: 1px solid #494949;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 70px;
+    background-color: #5d0377;
+    color: white;
+    overflow: inherit;
+}
+
+.cadastrar_button:hover {
+    background-color: #8b0598;
+}

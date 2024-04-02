@@ -1,0 +1,110 @@
+ <div class="screen">
+        <!-- Conteúdo HTML do corpo aqui -->
+       <div class="screen">
+        	<div class="navbar"></div>
+        	<div class="list">
+            	<div class="item">
+                	<div class="img"></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="item">
+                	<div class="img"></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="item">
+                	<div class="img"></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="item">
+                	<div class="img"></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+	        <div class="circle"></div>
+			<div class="menu">
+				<ul>
+					<li><a href="{% url 'home' %}">Clientes</a></li>
+					<li><a href="">Pedidos</a></li>
+					<li><a href="">Separacao</a></li>
+                    <li><a href="">Settings</a></li>
+                    <li><a href="">Contact</a></li>
+				</ul>
+			</div>
+			<div class="burger">
+				<div class="x"></div>
+				<div class="y"></div>
+                <div class="z"></div>
+			</div>
+
+		</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        // JavaScript aqui
+        $(document).ready(function() {
+        if ('ontouchstart' in window) {
+            var click = 'touchstart';
+        } else {
+            var click = 'click';
+        }
+
+        $('div.burger').on(click, function() {
+            if (!$(this).hasClass('open')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+
+        $('div.menu ul li a').on(click, function(e) {
+            e.stopPropagation(); // Impede a propagação do evento de clique
+        });
+
+        function openMenu() {
+            $('div.circle').addClass('expand');
+            $('div.burger').addClass('open');
+            $('div.x, div.y, div.z').addClass('collapse');
+            $('.menu li').addClass('animate');
+
+            setTimeout(function() {
+                $('div.y').hide();
+                $('div.x').addClass('rotate30');
+                $('div.z').addClass('rotate150');
+            }, 70);
+            setTimeout(function() {
+                $('div.x').addClass('rotate45');
+                $('div.z').addClass('rotate135');
+            }, 120);
+        }
+
+        function closeMenu() {
+            $('div.burger').removeClass('open');
+            $('div.x').removeClass('rotate45').addClass('rotate30');
+            $('div.z').removeClass('rotate135').addClass('rotate150');
+            $('div.circle').removeClass('expand');
+            $('.menu li').removeClass('animate');
+
+            setTimeout(function() {
+                $('div.x').removeClass('rotate30');
+                $('div.z').removeClass('rotate150');
+            }, 50);
+            setTimeout(function() {
+                $('div.y').show();
+                $('div.x, div.y, div.z').removeClass('collapse');
+            }, 70);
+        }
+    });
+    </script>
