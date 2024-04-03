@@ -13,3 +13,12 @@ class Clientes(models.Model):
 
     def __str__(self):
         return self.nome_fantasia + ' - Nome Real: ' + self.razao_social
+
+
+class Produtos(models.Model):
+    nome = models.CharField(max_length=50)
+    codigo = models.CharField(blank=False, null=False)
+    preco_compra = models.DecimalField(max_digits=3, decimal_places=2)
+
+    def __str__(self):
+        return self.nome + self.codigo

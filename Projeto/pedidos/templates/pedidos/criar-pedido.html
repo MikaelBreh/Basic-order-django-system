@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'pedidos/css/criar-pedido-style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#cliente_input').change(function(){
+                var clienteSelecionado = $(this).val();
+                $.ajax({
+                    url: '{% url "obter_informacoes_cliente" %}',
+                    method: 'GET',
+                    data: {'cliente': clienteSelecionado},
+                    success: function(response){
+                        $('#informacoes_cliente').html(response.informacoes_html);
+                    },
+                    error: function(xhr, errmsg, err){
+                        console.log(xhr.status + ": " + xhr.responseText);
+                    }
+                });
+            });
+        });
+</script>
+{% endblock  %}
+
+{% block body %}
+
+<h1 class="title-h1">Criar Pedido</h1>
+
+<p class="lead">
+    Preencha todas as informações abaixo para criar um novo Pedido.
+</p>
+
+<input type="text" id="cliente_input" list="nomes_clientes" placeholder="Selecione um Cliente" class="form_control">
+<datalist id="nomes_clientes">
+    {% for cliente in clientes %}
+        <option value="{{ cliente.nome_fantasia }}">
+    {% endfor %}
+</datalist>
+
+<div id="informacoes_cliente"></div>
+
+{% endblock body %}

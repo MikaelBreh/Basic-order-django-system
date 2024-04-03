@@ -14,6 +14,8 @@
     color: #666; /* Cor do texto */
     text-align: center;
     padding-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .cadastrar_cliente{
@@ -46,8 +48,10 @@
 }
 
 .cadastrar_button{
+    margin-left: 6%;
     width: 80%;
     margin-top: 80px;
+    margin-bottom: 100px;
     padding: 15px 25px;
     display: inline-block;
     border: 1px solid #494949;
